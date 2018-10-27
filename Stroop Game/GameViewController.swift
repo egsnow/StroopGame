@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameViewController.swift
 //  Stroop Game
 //
 //  Created by Eric Snow on 10/12/18.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
+    
     
     @IBOutlet weak var replayGame: UIButton!
     @IBOutlet weak var boxTL: UIView!
@@ -18,14 +19,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var colorWordLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var gameOverLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     
+    
+    var highScore = 0
     var blinkTimer: Timer?
+    var gameTimer: Timer?
     var timerIsRunning = false
     var myTimer = 10
     var myScore = 0
     var myAnswer = true
     var colorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
     var wordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
+    
     
     @IBAction func button0(_ sender: UIButton) {
         answerButton(buttonPressed: sender)
@@ -34,12 +40,14 @@ class ViewController: UIViewController {
         runTheClock()
     }
     
+    
     @IBAction func button1(_ sender: UIButton) {
         answerButton(buttonPressed: sender)
         backgroundColor()
         updateLabel()
         runTheClock()
     }
+    
     
     @IBAction func button2(_ sender: UIButton) {
         answerButton(buttonPressed: sender)
@@ -48,12 +56,14 @@ class ViewController: UIViewController {
         runTheClock()
     }
     
+    
     @IBAction func button3(_ sender: UIButton) {
         answerButton(buttonPressed: sender)
         backgroundColor()
         updateLabel()
         runTheClock()
     }
+    
     
     func backgroundColor() {
         colorsArray.shuffle()
@@ -64,12 +74,15 @@ class ViewController: UIViewController {
         boxBR.backgroundColor = colorsArray[3]
     }
     
+    
     func updateLabel() {
         wordsArray.shuffle()
         colorsArray.shuffle()
         colorWordLabel.textColor = colorsArray[0]
         colorWordLabel.text = wordsArray[0]
+        highScoreLabel.text = "HighScore: \(highScore)"
     }
+    
     
     func answerButton(buttonPressed: UIButton) {
         if buttonPressed.backgroundColor == colorsArray[0] {
@@ -77,8 +90,8 @@ class ViewController: UIViewController {
         } else {
             myAnswer = false
         }
-        
     }
+    
     
     func runTheClock() {
         if myAnswer == true && timerIsRunning == false {
@@ -87,42 +100,38 @@ class ViewController: UIViewController {
         } else if myAnswer == true && timerIsRunning == true {
             updateScore()
         } else if myAnswer == false && timerIsRunning == true {
-            updateScore()
-        } else {
+            endGame()
+        } else if myAnswer == false && timerIsRunning == false {
+            colorWordLabel.text = "START"
         }
     }
+    
+    
+    func updateHighScore() {
+        if highScore < myScore {
+            highScore = myScore
+        }
+        highScoreLabel.text = "High Score: \(highScore)"
+    }
+    
     
     func updateScore() {
         if myAnswer == true {
             myScore += 1
-        } else {
-            if myScore <= 0 {
-                myScore = 0
-            } else {
-                myScore -= 1
+        }
+    }
+    
+    
+    func countdownTimer() {
+        gameTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.myTimer -= 1
+            self.timerLabel.text = "Timer: \(self.myTimer)"
+            if  self.myTimer <= 0 {
+                self.endGame()
             }
         }
     }
     
-    func countdownTimer() {
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            self.myTimer -= 1
-            self.timerLabel.text = "Timer: \(self.myTimer)"
-            if  self.myTimer <= 0 {
-                timer.invalidate()
-                self.boxTL.isHidden = true
-                self.boxTR.isHidden = true
-                self.boxBL.isHidden = true
-                self.boxBR.isHidden = true
-                self.colorWordLabel.text = ""
-                self.gameOverLabel.text = "GAME OVER"
-                self.replayGame.isEnabled = true
-                self.replayGame.setTitle("Play Again?", for: .normal)
-                self.colorTimer()
-                self.timerLabel.text = "Score: \(self.myScore)"
-            }
-        }
-    }
     
     func colorTimer(){
         var myColorInt = 0
@@ -134,6 +143,7 @@ class ViewController: UIViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colorWordLabel.text = "START"
@@ -141,6 +151,7 @@ class ViewController: UIViewController {
         colorWordLabel.textColor = colorsArray[0]
         timerLabel.text = "Timer: \(myTimer)"
         replayGame.setTitle("", for: .normal)
+        updateHighScore()
     }
     
     
@@ -149,7 +160,27 @@ class ViewController: UIViewController {
     }
     
     
+    func endGame() {
+        performSegue(withIdentifier: "endGameSegue", sender: nil)
+        gameTimer?.invalidate()
+        boxTL.isHidden = true
+        boxTR.isHidden = true
+        boxBL.isHidden = true
+        boxBR.isHidden = true
+        colorWordLabel.text = ""
+        gameOverLabel.text = "GAME OVER"
+        replayGame.isHidden = false
+        replayGame.isEnabled = true
+        replayGame.setTitle("Play Again?", for: .normal)
+        colorTimer()
+        timerLabel.text = "Score: \(myScore)"
+        updateHighScore()
+        updateScore()
+    }
+    
+    
     func startNewGame() {
+        replayGame.isHidden = true
         replayGame.isEnabled = false
         colorWordLabel.text = "START"
         gameOverLabel.text = ""
@@ -165,8 +196,7 @@ class ViewController: UIViewController {
         backgroundColor()
         colorWordLabel.textColor = colorsArray[0]
         timerLabel.text = "Timer: \(myTimer)"
-        replayGame.setTitle("", for: .normal)
-
     }
     
 }
+
