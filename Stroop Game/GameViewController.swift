@@ -35,6 +35,7 @@ class GameViewController: UIViewController {
     //UPDATE LABELS
     func updateLabel() {
         colorsArray.shuffle()
+        gameBrain.wordsArray.shuffle()
         colorWordLabel.textColor = colorsArray[0]
         colorWordLabel.text = gameBrain.wordsArray[0]
     }
