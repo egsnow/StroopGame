@@ -15,46 +15,55 @@ class GameModel {
     
     
     // MARK:- variables & constants
-    var highScore = 0
-    var timerIsRunning = false
-    var myTimer = 10
-    var myScore = 0
-    var myAnswer = false
-    var wordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
+    ///Keeps track of game timer.
+    let totalGameTime = 6
+    var timeRemaining = 0
     var clockShouldBeRunning = false
+    var timerIsRunning = false
+    ///Keeps track of game score and high score.
+    let newGameScore = 0
+    var currentScore = 0
+    var highScore = 0
+    var highScoreIsNew = false
+    var answerIsCorrect = false
     var gameIsOver = false
+    var wordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
+
     
     
     
     // MARK:- functions
-    //HAS THE GAME STARTED?
+    ///Game logic - Starts the clock. Increments points for correct selections. Ends game for incorrect selections.
     func playGame() {
-        if myAnswer == true && timerIsRunning == false {
+        if answerIsCorrect == true && timerIsRunning == false {
             clockShouldBeRunning = true
-        } else if myAnswer == true && timerIsRunning == true {
-            myScore += 1
-        } else if myAnswer == false && timerIsRunning == true {
+        } else if answerIsCorrect == true && timerIsRunning == true {
+            currentScore += 1
+        } else if answerIsCorrect == false && timerIsRunning == true {
             endGame()
-        } else if myAnswer == false && timerIsRunning == false {
+        } else if answerIsCorrect == false && timerIsRunning == false {
         }
     }
     
     
     
-    //HIGHSCORE
+    ///Tracks and updates highscore variable when new high score is achieved.
     func updateHighScore() {
-        if highScore < myScore {
-            highScore = myScore
+        if highScore < currentScore {
+            highScore = currentScore
+            highScoreIsNew = true
+        } else if highScore >= currentScore {
+            highScoreIsNew = false
         }
-    }    
-
+    }
     
     
-    //NEW GAME
+    
+    ///Resets all variables and constants to initial settings.
     func startNewGame() {
-        myScore = 0
-        myTimer = 10
-        myAnswer = false
+        currentScore = newGameScore
+        timeRemaining = totalGameTime
+        answerIsCorrect = false
         timerIsRunning = false
         clockShouldBeRunning = false
         gameIsOver = false
@@ -62,7 +71,7 @@ class GameModel {
     
     
     
-    //GAME OVER
+    ///Passes end game function for incorrect answer selection during game logic.
     func endGame() {
         gameIsOver = true
     }

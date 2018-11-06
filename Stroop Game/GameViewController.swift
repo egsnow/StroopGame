@@ -24,7 +24,6 @@ class GameViewController: UIViewController {
     
     
     // MARK:- variables & constants
-    var blinkTimer: Timer?
     var colorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
     var gameTimer: Timer?
     let gameBrain = GameModel()
@@ -32,8 +31,8 @@ class GameViewController: UIViewController {
     
     
     // MARK:- functions
-    //UPDATE LABELS
-    func updateLabel() {
+    ///Updates Color Word Label
+    func updateColorLabel() {
         colorsArray.shuffle()
         gameBrain.wordsArray.shuffle()
         colorWordLabel.textColor = colorsArray[0]
@@ -42,51 +41,51 @@ class GameViewController: UIViewController {
     
     
     
-    //VIEW DID LOAD
+    ///View did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        newGameViews()
+        resetGame()
         checkTheClock()
         gameBrain.updateHighScore()
     }
     
     
     
-    //TOP LEFT BUTTON
+    ///Top left button
     @IBAction func button0(_ sender: UIButton) {
-        answerButton(buttonPressed: sender)
+        colorButtonPressed(buttonPressed: sender)
     }
     
     
     
-    //TOP RIGHT BUTTON
+    ///Top right button
     @IBAction func button1(_ sender: UIButton) {
-        answerButton(buttonPressed: sender)
+        colorButtonPressed(buttonPressed: sender)
     }
     
     
     
-    //BOTTOM LEFT BUTTON
+    ///Bottom left button
     @IBAction func button2(_ sender: UIButton) {
-        answerButton(buttonPressed: sender)
+        colorButtonPressed(buttonPressed: sender)
     }
     
     
     
-    //BOTTOM RIGHT BUTTON
+    ///Bottom right button
     @IBAction func button3(_ sender: UIButton) {
-        answerButton(buttonPressed: sender)
+        colorButtonPressed(buttonPressed: sender)
     }
 
     
     
-    //GAME TIMER
+    ///Game timer logic.
     func startTimer() {
         gameBrain.timerIsRunning = true
         gameTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            self.gameBrain.myTimer -= 1
-            self.timerLabel.text = "Timer: \(self.gameBrain.myTimer)"
-            if  self.gameBrain.myTimer <= 0 {
+            self.gameBrain.timeRemaining -= 1
+            self.timerLabel.text = "Timer: \(self.gameBrain.timeRemaining)"
+            if  self.gameBrain.timeRemaining <= 0 {
                 self.gameOver()
             }
             
@@ -95,24 +94,13 @@ class GameViewController: UIViewController {
     
 
     
-    //BLINK COLOR TIMER
-    func colorTimer(){
-        var myColorInt = 0
-        blinkTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { timer in
-            myColorInt += 1
-            myColorInt %= 4
-            }
-    }
-
-    
-    
-    //IS THE ANSWER CORRECT?
-    func answerButton(buttonPressed: UIButton) {
+    ///Keeps track of correct and incorrect answer selections and calls functions according to answer selection.
+    func colorButtonPressed(buttonPressed: UIButton) {
         if buttonPressed.backgroundColor == colorsArray[0] {
-            gameBrain.myAnswer = true
-            updateLabel()
+            gameBrain.answerIsCorrect = true
+            updateColorLabel()
         } else {
-            gameBrain.myAnswer = false
+            gameBrain.answerIsCorrect = false
         }
         checkTheClock()
         if gameBrain.gameIsOver == true {
@@ -123,29 +111,28 @@ class GameViewController: UIViewController {
     
     
     
-    //GAME OVER
+    ///Passes end of game data to score screen via segue.
     func gameOver() {
         gameTimer?.invalidate()
         gameBrain.updateHighScore()
         performSegue(withIdentifier: "endGameSegue", sender: nil)
-        newGameViews()
-        timerLabel.text = "Timer: \(gameBrain.myTimer)"
+        resetGame()
+        timerLabel.text = "Timer: \(gameBrain.timeRemaining)"
     }
     
     
     
-    //NEW GAME
-    func newGameViews() {
+    ///Resets game logic to default settings.
+    func resetGame() {
         gameBrain.startNewGame()
         colorWordLabel.text = "START"
-        blinkTimer?.invalidate()
         colorWordLabel.textColor = colorsArray[0]
-        timerLabel.text = "Timer: \(gameBrain.myTimer)"
+        timerLabel.text = "Timer: \(gameBrain.timeRemaining)"
     }
     
     
     
-    //HAS THE GAME STARTED?
+    ///Starts the timer once first correct answer is selected.
     func checkTheClock() {
         if gameBrain.clockShouldBeRunning && !gameBrain.timerIsRunning {
             startTimer()
@@ -154,12 +141,12 @@ class GameViewController: UIViewController {
     
     
     
-    //SEGUE
+    ///Segue data.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nextVC = segue.destination as? ScoreScreenViewController {
             nextVC.updateHighScore = gameBrain.highScore
-            nextVC.updateGameScore = gameBrain.myScore
-            
+            nextVC.updateGameScore = gameBrain.currentScore
+            nextVC.congratsHighScore = gameBrain.highScoreIsNew
         }
     }
     
