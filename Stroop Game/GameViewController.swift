@@ -28,7 +28,7 @@ class GameViewController: UIViewController {
     var colorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
     var gameTimer: Timer?
     let gameBrain = GameModel()
-    
+
     
     
     // MARK:- functions
@@ -118,6 +118,7 @@ class GameViewController: UIViewController {
         if gameBrain.gameIsOver == true {
             gameOver()
         }
+        gameBrain.playGame()
     }
     
     
@@ -125,6 +126,7 @@ class GameViewController: UIViewController {
     //GAME OVER
     func gameOver() {
         gameTimer?.invalidate()
+        gameBrain.updateHighScore()
         performSegue(withIdentifier: "endGameSegue", sender: nil)
         newGameViews()
         timerLabel.text = "Timer: \(gameBrain.myTimer)"
@@ -145,13 +147,21 @@ class GameViewController: UIViewController {
     
     //HAS THE GAME STARTED?
     func checkTheClock() {
-        gameBrain.playGame()
         if gameBrain.clockShouldBeRunning && !gameBrain.timerIsRunning {
             startTimer()
         }
     }
     
     
+    
+    //SEGUE
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextVC = segue.destination as? ScoreScreenViewController {
+            nextVC.updateHighScore = gameBrain.highScore
+            nextVC.updateGameScore = gameBrain.myScore
+            
+        }
+    }
     
     
 }

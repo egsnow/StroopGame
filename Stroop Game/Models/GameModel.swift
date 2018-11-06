@@ -32,7 +32,7 @@ class GameModel {
         if myAnswer == true && timerIsRunning == false {
             clockShouldBeRunning = true
         } else if myAnswer == true && timerIsRunning == true {
-            gameScore()
+            myScore += 1
         } else if myAnswer == false && timerIsRunning == true {
             endGame()
         } else if myAnswer == false && timerIsRunning == false {
@@ -46,17 +46,8 @@ class GameModel {
         if highScore < myScore {
             highScore = myScore
         }
-    }
-    
-    
-    
-    //GAME SCORE
-    func gameScore() {
-        if myAnswer == true {
-            myScore += 1
-        }
-    }
-    
+    }    
+
     
     
     //NEW GAME
@@ -66,7 +57,6 @@ class GameModel {
         myAnswer = false
         timerIsRunning = false
         clockShouldBeRunning = false
-        updateHighScore()
         gameIsOver = false
     }
     
@@ -74,8 +64,6 @@ class GameModel {
     
     //GAME OVER
     func endGame() {
-        gameScore()
-        updateHighScore()
         gameIsOver = true
     }
 

@@ -10,7 +10,16 @@ import UIKit
 
 class ScoreScreenViewController: UIViewController {
 
+    var updateHighScore = 0
+    var updateGameScore = 0
     
+    
+    func scores () {
+        highScoreLabel.text = "High Score: \(updateHighScore)"
+        myScoreLabel.text = "Score: \(updateGameScore)"
+        
+
+    }
     
     @IBOutlet weak var myScoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
@@ -18,13 +27,7 @@ class ScoreScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-
-
-
-
-
+        scores()
     }
     
 
