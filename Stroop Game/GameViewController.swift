@@ -24,15 +24,15 @@ class GameViewController: UIViewController {
     
     
     // MARK:- variables & constants
-    var colorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
-    var gameTimer: Timer?
-    let gameBrain = GameModel()
+    private var colorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
+    private var gameTimer: Timer?
+    private let gameBrain = GameModel()
 
     
     
     // MARK:- functions
     ///Updates Color Word Label
-    func updateColorLabel() {
+    private func updateColorLabel() {
         colorsArray.shuffle()
         gameBrain.wordsArray.shuffle()
         colorWordLabel.textColor = colorsArray[0]
@@ -51,36 +51,15 @@ class GameViewController: UIViewController {
     
     
     
-    ///Top left button
-    @IBAction func button0(_ sender: UIButton) {
+    ///Game buttons/selections pressed.
+    @IBAction func colorButtonPressed(_ sender: UIButton) {
         colorButtonPressed(buttonPressed: sender)
     }
     
-    
-    
-    ///Top right button
-    @IBAction func button1(_ sender: UIButton) {
-        colorButtonPressed(buttonPressed: sender)
-    }
-    
-    
-    
-    ///Bottom left button
-    @IBAction func button2(_ sender: UIButton) {
-        colorButtonPressed(buttonPressed: sender)
-    }
-    
-    
-    
-    ///Bottom right button
-    @IBAction func button3(_ sender: UIButton) {
-        colorButtonPressed(buttonPressed: sender)
-    }
 
     
-    
     ///Game timer logic.
-    func startTimer() {
+    private func startTimer() {
         gameBrain.timerIsRunning = true
         gameTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.gameBrain.timeRemaining -= 1
@@ -95,7 +74,7 @@ class GameViewController: UIViewController {
 
     
     ///Keeps track of correct and incorrect answer selections and calls functions according to answer selection.
-    func colorButtonPressed(buttonPressed: UIButton) {
+    private func colorButtonPressed(buttonPressed: UIButton) {
         if buttonPressed.backgroundColor == colorsArray[0] {
             gameBrain.answerIsCorrect = true
             updateColorLabel()
@@ -112,7 +91,7 @@ class GameViewController: UIViewController {
     
     
     ///Passes end of game data to score screen via segue.
-    func gameOver() {
+    private func gameOver() {
         gameTimer?.invalidate()
         gameBrain.updateHighScore()
         performSegue(withIdentifier: "endGameSegue", sender: nil)
@@ -123,7 +102,7 @@ class GameViewController: UIViewController {
     
     
     ///Resets game logic to default settings.
-    func resetGame() {
+    private func resetGame() {
         gameBrain.startNewGame()
         colorWordLabel.text = "START"
         colorWordLabel.textColor = colorsArray[0]
@@ -133,7 +112,7 @@ class GameViewController: UIViewController {
     
     
     ///Starts the timer once first correct answer is selected.
-    func checkTheClock() {
+    private func checkTheClock() {
         if gameBrain.clockShouldBeRunning && !gameBrain.timerIsRunning {
             startTimer()
         }

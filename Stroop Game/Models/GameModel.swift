@@ -16,12 +16,12 @@ class GameModel {
     
     // MARK:- variables & constants
     ///Keeps track of game timer.
-    let totalGameTime = 6
+    private let totalGameTime = 6
     var timeRemaining = 0
     var clockShouldBeRunning = false
     var timerIsRunning = false
     ///Keeps track of game score and high score.
-    let newGameScore = 0
+    private let newGameScore = 0
     var currentScore = 0
     var highScore = 0
     var highScoreIsNew = false
@@ -72,7 +72,7 @@ class GameModel {
     
     
     ///Passes end game function for incorrect answer selection during game logic.
-    func endGame() {
+    private func endGame() {
         gameIsOver = true
     }
 

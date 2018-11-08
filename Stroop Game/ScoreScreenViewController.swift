@@ -21,12 +21,12 @@ class ScoreScreenViewController: UIViewController {
     var updateHighScore = 0
     var updateGameScore = 0
     var congratsHighScore = false
-    var blinkTimer: Timer?
-    var blinkColorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1), #colorLiteral(red: 0.5810584426, green: 0.1285524964, blue: 0.5745313764, alpha: 1), #colorLiteral(red: 0, green: 0.9914394021, blue: 1, alpha: 1),]
+    private var blinkTimer: Timer?
+    private var blinkColorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1), #colorLiteral(red: 0.5810584426, green: 0.1285524964, blue: 0.5745313764, alpha: 1), #colorLiteral(red: 0, green: 0.9914394021, blue: 1, alpha: 1),]
 
     
     ///Updates score labels to score screen.
-    func postScores () {
+    private func postScores () {
         highScoreLabel.text = "High Score: \(updateHighScore)"
         myScoreLabel.text = "Score: \(updateGameScore)"
         colorTimer()
@@ -41,7 +41,7 @@ class ScoreScreenViewController: UIViewController {
     
     
 ///Cycles through array of colors to blink the label if new high score is achieved.
-    func colorTimer() {
+    private func colorTimer() {
         var myColorInt = 0
         blinkTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
             myColorInt += 1
