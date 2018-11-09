@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
     
     // MARK:- variables & constants
     private var colorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
+    private var oldColorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
     private var gameTimer: Timer?
     private let gameBrain = GameModel()
 
@@ -33,8 +34,14 @@ class GameViewController: UIViewController {
     // MARK:- functions
     ///Updates Color Word Label
     private func updateColorLabel() {
-        colorsArray.shuffle()
-        gameBrain.wordsArray.shuffle()
+        oldColorsArray[0] = colorsArray[0]
+        gameBrain.oldWordsArray[0] = gameBrain.wordsArray[0]
+        while colorsArray[0] == oldColorsArray[0] {
+            colorsArray.shuffle()
+        }
+        while gameBrain.wordsArray[0] == gameBrain.oldWordsArray[0] {
+            gameBrain.wordsArray.shuffle()
+        }
         colorWordLabel.textColor = colorsArray[0]
         colorWordLabel.text = gameBrain.wordsArray[0]
     }
@@ -45,8 +52,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resetGame()
-        checkTheClock()
-        gameBrain.updateHighScore()
+        gameBrain.highScore = UserDefaults.standard.integer(forKey: "highScore")
     }
     
     
@@ -80,12 +86,13 @@ class GameViewController: UIViewController {
             updateColorLabel()
         } else {
             gameBrain.answerIsCorrect = false
+            
         }
         checkTheClock()
+        gameBrain.playGame()
         if gameBrain.gameIsOver == true {
             gameOver()
         }
-        gameBrain.playGame()
     }
     
     

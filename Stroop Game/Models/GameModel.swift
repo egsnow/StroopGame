@@ -27,6 +27,7 @@ class GameModel {
     var highScoreIsNew = false
     var answerIsCorrect = false
     var gameIsOver = false
+    var oldWordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
     var wordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
 
     
@@ -52,6 +53,7 @@ class GameModel {
         if highScore < currentScore {
             highScore = currentScore
             highScoreIsNew = true
+            UserDefaults.standard.set(highScore, forKey: "highScore")
         } else if highScore >= currentScore {
             highScoreIsNew = false
         }
@@ -77,6 +79,7 @@ class GameModel {
     }
 
     
+
 
 }
 
