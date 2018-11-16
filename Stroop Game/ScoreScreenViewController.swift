@@ -9,7 +9,7 @@
 import UIKit
 
 class ScoreScreenViewController: UIViewController {
-    
+
     
     
     @IBOutlet weak var myScoreLabel: UILabel!
