@@ -26,9 +26,8 @@ class GameViewController: UIViewController {
     // MARK:- variables & constants
     private var colorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
     private var oldColorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
-    private var gameTimer: Timer?
     private let gameBrain = GameModel()
-
+    
     
     
     // MARK:- functions
@@ -51,7 +50,7 @@ class GameViewController: UIViewController {
     ///View did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        resetGame()
+        resetGameLabels()
         gameBrain.highScore = UserDefaults.standard.integer(forKey: "highScore")
     }
     
@@ -66,15 +65,12 @@ class GameViewController: UIViewController {
     
     ///Game timer logic.
     private func startTimer() {
-        gameBrain.timerIsRunning = true
-        gameTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            self.gameBrain.timeRemaining -= 1
             self.timerLabel.text = "Timer: \(self.gameBrain.timeRemaining)"
-            if  self.gameBrain.timeRemaining <= 0 {
-                self.gameOver()
-            }
-            
-        }
+//            if  self.gameBrain.timeRemaining <= 0 {
+//                self.gameOver()
+//            }
+        
+//  }
     }
     
 
@@ -99,18 +95,14 @@ class GameViewController: UIViewController {
     
     ///Passes end of game data to score screen via segue.
     private func gameOver() {
-        gameTimer?.invalidate()
-        gameBrain.updateHighScore()
         performSegue(withIdentifier: "endGameSegue", sender: nil)
-        resetGame()
-        timerLabel.text = "Timer: \(gameBrain.timeRemaining)"
+        resetGameLabels()
     }
     
     
     
     ///Resets game logic to default settings.
-    private func resetGame() {
-        gameBrain.startNewGame()
+    private func resetGameLabels() {
         colorWordLabel.text = "START"
         colorWordLabel.textColor = colorsArray[0]
         timerLabel.text = "Timer: \(gameBrain.timeRemaining)"

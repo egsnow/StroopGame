@@ -46,6 +46,7 @@
 			children = (
 				0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */,
 				0F26319621718B2A006026F1 /* GameViewController.swift */,
+				0F19F1AE219F670A001C8284 /* StartScreenViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -89,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				0F26319821718B2A006026F1 /* Main.storyboard */,
-				0F19F1AE219F670A001C8284 /* StartScreenViewController.swift */,
 				0F1A34392189484700873F96 /* Controllers */,
 				0F1A343A2189485E00873F96 /* Models */,
 				0F1A343B2189486C00873F96 /* Supporting Files */,

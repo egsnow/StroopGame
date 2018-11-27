@@ -8,7 +8,11 @@
 
 import Foundation
 
-
+protocol GameDelegate {
+    func gameOver()
+    func checkTheClock(clockShouldBeRunning: Bool, timerIsRunning: Bool)
+    func startTimer(timerIsRunning: Bool, timeRemaining: Int)
+}
 
 class GameModel {
 
@@ -20,6 +24,8 @@ class GameModel {
     var timeRemaining = 0
     var clockShouldBeRunning = false
     var timerIsRunning = false
+    private var gameTimer: Timer?
+
     ///Keeps track of game score and high score.
     private let newGameScore = 0
     var currentScore = 0
@@ -30,7 +36,7 @@ class GameModel {
     var oldWordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
     var wordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
 
-    
+    var delegate: GameDelegate?
     
     
     // MARK:- functions
@@ -78,6 +84,28 @@ class GameModel {
         gameIsOver = true
     }
 
+    
+    
+    ///Game timer logic.
+    private func startTimer() {
+        timerIsRunning = true
+        gameTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.timeRemaining -= 1
+            if  self.timeRemaining <= 0 {
+                self.delegate?.gameOver()
+            }
+            
+        }
+    }
+    
+    
+    ///Passes end of game data to score screen via segue.
+    private func gameOver() {
+        gameTimer?.invalidate()
+        updateHighScore()
+        startNewGame()
+
+    }
     
 
 
