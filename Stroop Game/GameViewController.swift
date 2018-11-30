@@ -8,8 +8,9 @@
 
 import UIKit
 
+class GameViewController: UIViewController, GameDelegate {
 
-class GameViewController: UIViewController {
+ 
     
     
     
@@ -50,10 +51,15 @@ class GameViewController: UIViewController {
     ///View did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        resetGameLabels()
+        gameBrain.delegate = self
         gameBrain.highScore = UserDefaults.standard.integer(forKey: "highScore")
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        gameBrain.startNewGame()
+    }
     
     
     ///Game buttons/selections pressed.
@@ -61,20 +67,13 @@ class GameViewController: UIViewController {
         colorButtonPressed(buttonPressed: sender)
     }
     
-
     
     ///Game timer logic.
-    private func startTimer() {
+    internal func updateTimerLabel(timeRemaining: Int) {
             self.timerLabel.text = "Timer: \(self.gameBrain.timeRemaining)"
-//            if  self.gameBrain.timeRemaining <= 0 {
-//                self.gameOver()
-//            }
-        
-//  }
     }
     
 
-    
     ///Keeps track of correct and incorrect answer selections and calls functions according to answer selection.
     private func colorButtonPressed(buttonPressed: UIButton) {
         if buttonPressed.backgroundColor == colorsArray[0] {
@@ -82,41 +81,23 @@ class GameViewController: UIViewController {
             updateColorLabel()
         } else {
             gameBrain.answerIsCorrect = false
-            
         }
-        checkTheClock()
         gameBrain.playGame()
-        if gameBrain.gameIsOver == true {
-            gameOver()
-        }
     }
-    
     
     
     ///Passes end of game data to score screen via segue.
-    private func gameOver() {
+    internal func gameOver() {
         performSegue(withIdentifier: "endGameSegue", sender: nil)
-        resetGameLabels()
     }
     
     
-    
     ///Resets game logic to default settings.
-    private func resetGameLabels() {
+    internal func resetGameLabels(timeRemaining: Int) {
         colorWordLabel.text = "START"
         colorWordLabel.textColor = colorsArray[0]
         timerLabel.text = "Timer: \(gameBrain.timeRemaining)"
     }
-    
-    
-    
-    ///Starts the timer once first correct answer is selected.
-    private func checkTheClock() {
-        if gameBrain.clockShouldBeRunning && !gameBrain.timerIsRunning {
-            startTimer()
-        }
-    }
-    
     
     
     ///Segue data.

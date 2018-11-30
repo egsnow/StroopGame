@@ -9,9 +9,12 @@
 import Foundation
 
 protocol GameDelegate {
+    
+    func resetGameLabels(timeRemaining: Int)
     func gameOver()
-    func checkTheClock(clockShouldBeRunning: Bool, timerIsRunning: Bool)
-    func startTimer(timerIsRunning: Bool, timeRemaining: Int)
+    
+    func updateTimerLabel(timeRemaining: Int)
+    
 }
 
 class GameModel {
@@ -22,7 +25,6 @@ class GameModel {
     ///Keeps track of game timer.
     private let totalGameTime = 6
     var timeRemaining = 0
-    var clockShouldBeRunning = false
     var timerIsRunning = false
     private var gameTimer: Timer?
 
@@ -32,7 +34,6 @@ class GameModel {
     var highScore = 0
     var highScoreIsNew = false
     var answerIsCorrect = false
-    var gameIsOver = false
     var oldWordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
     var wordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
 
@@ -43,7 +44,7 @@ class GameModel {
     ///Game logic - Starts the clock. Increments points for correct selections. Ends game for incorrect selections.
     func playGame() {
         if answerIsCorrect == true && timerIsRunning == false {
-            clockShouldBeRunning = true
+            startTimer()
         } else if answerIsCorrect == true && timerIsRunning == true {
             currentScore += 1
         } else if answerIsCorrect == false && timerIsRunning == true {
@@ -73,15 +74,16 @@ class GameModel {
         timeRemaining = totalGameTime
         answerIsCorrect = false
         timerIsRunning = false
-        clockShouldBeRunning = false
-        gameIsOver = false
+        delegate?.resetGameLabels(timeRemaining: timeRemaining)
     }
     
     
     
     ///Passes end game function for incorrect answer selection during game logic.
     private func endGame() {
-        gameIsOver = true
+        gameTimer?.invalidate()
+        updateHighScore()
+        delegate?.gameOver()
     }
 
     
@@ -91,21 +93,15 @@ class GameModel {
         timerIsRunning = true
         gameTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.timeRemaining -= 1
+            self.delegate?.updateTimerLabel(timeRemaining:
+                self.timeRemaining)
             if  self.timeRemaining <= 0 {
-                self.delegate?.gameOver()
+                self.endGame()
             }
-            
+
         }
     }
     
-    
-    ///Passes end of game data to score screen via segue.
-    private func gameOver() {
-        gameTimer?.invalidate()
-        updateHighScore()
-        startNewGame()
-
-    }
     
 
 
