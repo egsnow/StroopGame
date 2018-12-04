@@ -14,6 +14,12 @@
 		0F26319A21718B2A006026F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F26319821718B2A006026F1 /* Main.storyboard */; };
 		0F26319C21718B2B006026F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F26319B21718B2B006026F1 /* Assets.xcassets */; };
 		0F26319F21718B2B006026F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F26319D21718B2B006026F1 /* LaunchScreen.storyboard */; };
+		0F4B895821B6F8AA009D4270 /* bip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B895221B6F8A9009D4270 /* bip.mp3 */; };
+		0F4B895921B6F8AA009D4270 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B895321B6F8A9009D4270 /* correct.mp3 */; };
+		0F4B895A21B6F8AA009D4270 /* clack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B895421B6F8A9009D4270 /* clack.mp3 */; };
+		0F4B895B21B6F8AA009D4270 /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B895521B6F8AA009D4270 /* error.mp3 */; };
+		0F4B895C21B6F8AA009D4270 /* PlaySoundFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B895621B6F8AA009D4270 /* PlaySoundFunction.swift */; };
+		0F4B895D21B6F8AA009D4270 /* fonfar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B895721B6F8AA009D4270 /* fonfar.mp3 */; };
 		0FD2F3D32184077100F50A4F /* ScoreScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,12 @@
 		0F26319B21718B2B006026F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F26319E21718B2B006026F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F2631A021718B2B006026F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F4B895221B6F8A9009D4270 /* bip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bip.mp3; sourceTree = "<group>"; };
+		0F4B895321B6F8A9009D4270 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		0F4B895421B6F8A9009D4270 /* clack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clack.mp3; sourceTree = "<group>"; };
+		0F4B895521B6F8AA009D4270 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
+		0F4B895621B6F8AA009D4270 /* PlaySoundFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundFunction.swift; sourceTree = "<group>"; };
+		0F4B895721B6F8AA009D4270 /* fonfar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fonfar.mp3; sourceTree = "<group>"; };
 		0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +74,12 @@
 		0F1A343B2189486C00873F96 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F4B895221B6F8A9009D4270 /* bip.mp3 */,
+				0F4B895421B6F8A9009D4270 /* clack.mp3 */,
+				0F4B895321B6F8A9009D4270 /* correct.mp3 */,
+				0F4B895521B6F8AA009D4270 /* error.mp3 */,
+				0F4B895721B6F8AA009D4270 /* fonfar.mp3 */,
+				0F4B895621B6F8AA009D4270 /* PlaySoundFunction.swift */,
 				0F26319B21718B2B006026F1 /* Assets.xcassets */,
 				0F26319D21718B2B006026F1 /* LaunchScreen.storyboard */,
 				0F2631A021718B2B006026F1 /* Info.plist */,
@@ -155,8 +173,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4B895921B6F8AA009D4270 /* correct.mp3 in Resources */,
+				0F4B895821B6F8AA009D4270 /* bip.mp3 in Resources */,
 				0F26319F21718B2B006026F1 /* LaunchScreen.storyboard in Resources */,
+				0F4B895A21B6F8AA009D4270 /* clack.mp3 in Resources */,
+				0F4B895D21B6F8AA009D4270 /* fonfar.mp3 in Resources */,
 				0F26319C21718B2B006026F1 /* Assets.xcassets in Resources */,
+				0F4B895B21B6F8AA009D4270 /* error.mp3 in Resources */,
 				0F26319A21718B2A006026F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +194,7 @@
 				0F26319721718B2A006026F1 /* GameViewController.swift in Sources */,
 				0F1A34382187FD3F00873F96 /* GameModel.swift in Sources */,
 				0FD2F3D32184077100F50A4F /* ScoreScreenViewController.swift in Sources */,
+				0F4B895C21B6F8AA009D4270 /* PlaySoundFunction.swift in Sources */,
 				0F26319521718B2A006026F1 /* AppDelegate.swift in Sources */,
 				0F19F1AF219F670A001C8284 /* StartScreenViewController.swift in Sources */,
 			);

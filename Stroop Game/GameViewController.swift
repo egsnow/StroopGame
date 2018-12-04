@@ -23,27 +23,29 @@ class GameViewController: UIViewController, GameDelegate {
     @IBOutlet weak var timerLabel: UILabel!
     
     
+    @IBOutlet var colorButtons: [UIButton]!
+    
+    
     
     // MARK:- variables & constants
-    private var colorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
-    private var oldColorsArray = [#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)]
-    private let gameBrain = GameModel()
+    private var colorsArray = [#colorLiteral(red: 0.5981579423, green: 0.1302183867, blue: 0.07905782014, alpha: 1), #colorLiteral(red: 0.1021426842, green: 0.1914339662, blue: 0.07176273316, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 0.7728164792, green: 0.6411972642, blue: 0.2131647766, alpha: 1)]
+    private var oldColorsArray = [#colorLiteral(red: 0.5981579423, green: 0.1302183867, blue: 0.07905782014, alpha: 1), #colorLiteral(red: 0.1021426842, green: 0.1914339662, blue: 0.07176273316, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 0.7728164792, green: 0.6411972642, blue: 0.2131647766, alpha: 1)]
     
-    
+    private let gameBrain = GameModel(words: ["RED", "GREEN", "WHITE", "GOLD"])
     
     // MARK:- functions
     ///Updates Color Word Label
     private func updateColorLabel() {
         oldColorsArray[0] = colorsArray[0]
-        gameBrain.oldWordsArray[0] = gameBrain.wordsArray[0]
+        gameBrain.oldXmasWordsArray[0] = gameBrain.xmasWordsArray[0]
         while colorsArray[0] == oldColorsArray[0] {
             colorsArray.shuffle()
         }
-        while gameBrain.wordsArray[0] == gameBrain.oldWordsArray[0] {
-            gameBrain.wordsArray.shuffle()
+        while gameBrain.xmasWordsArray[0] == gameBrain.oldXmasWordsArray[0] {
+            gameBrain.xmasWordsArray.shuffle()
         }
         colorWordLabel.textColor = colorsArray[0]
-        colorWordLabel.text = gameBrain.wordsArray[0]
+        colorWordLabel.text = gameBrain.xmasWordsArray[0]
     }
     
     
@@ -51,6 +53,11 @@ class GameViewController: UIViewController, GameDelegate {
     ///View did load
     override func viewDidLoad() {
         super.viewDidLoad()
+        for (index, color) in colorsArray.enumerated() {
+            colorButtons[index].backgroundColor = color
+        }
+        
+        playSound("clack")
         gameBrain.delegate = self
         gameBrain.highScore = UserDefaults.standard.integer(forKey: "highScore")
     }

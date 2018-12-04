@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHH-Vr-amb">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,52 +9,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start Screen View Controller-->
         <scene sceneID="but-Ju-oGB">
             <objects>
-                <viewController id="uHH-Vr-amb" sceneMemberID="viewController">
+                <viewController id="uHH-Vr-amb" customClass="StartScreenViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UwM-me-GW5">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="400" translatesAutoresizingMaskIntoConstraints="NO" id="9JE-Zw-CHd">
-                                <rect key="frame" x="20" y="35" width="728" height="974"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startscreen" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-Ky-GCj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="9JE-Zw-CHd">
+                                <rect key="frame" x="20" y="35" width="280" height="518"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8RX-Uf-DNA">
-                                        <rect key="frame" x="0.0" y="0.0" width="728" height="424"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="72" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8RX-Uf-DNA">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="318"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STROOP GAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="afA-yT-awV">
-                                                <rect key="frame" x="62.5" y="0.0" width="603" height="209.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="STROOP GAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="afA-yT-awV">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="89.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="75"/>
-                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.54971480369567871" green="0.17317205667495728" blue="0.11752098053693771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="2" height="2"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Oe-wlU">
-                                                <rect key="frame" x="0.0" y="214.5" width="728" height="209.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Oe-wlU">
+                                                <rect key="frame" x="0.5" y="108.5" width="279.5" height="89"/>
                                                 <string key="text">Game Instructions:
 
 A series of words will be displayed in a separate series of colors. Ignore the word and tap the color in order to earn a point.  </string>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="shadowOffset" width="1" height="1"/>
+                                                <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-F4-dce">
+                                                <rect key="frame" x="45" y="228.5" width="190" height="89.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                                 </variation>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM3-Tr-jUT">
-                                        <rect key="frame" x="276" y="824" width="176" height="150"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM3-Tr-jUT">
+                                        <rect key="frame" x="80" y="368" width="120" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="98y-UW-vxc"/>
+                                            <constraint firstAttribute="width" constant="120" id="LaP-Er-WCF"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="55"/>
                                         <size key="titleShadowOffset" width="2" height="2"/>
-                                        <state key="normal" title="START">
+                                        <state key="normal" image="1df7afc9">
                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -63,59 +77,69 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         </connections>
                                     </button>
                                 </subviews>
-                                <variation key="heightClass=regular-widthClass=compact" spacing="200"/>
+                                <variation key="heightClass=regular-widthClass=compact" spacing="50"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9JE-Zw-CHd" firstAttribute="leading" secondItem="UwM-me-GW5" secondAttribute="leading" constant="20" id="ODH-be-Z3r"/>
                             <constraint firstItem="9JE-Zw-CHd" firstAttribute="top" secondItem="Ngr-8j-TA4" secondAttribute="top" constant="15" id="QW4-0o-uGC"/>
+                            <constraint firstAttribute="trailing" secondItem="ig4-Ky-GCj" secondAttribute="trailing" id="Uii-IZ-Dao"/>
+                            <constraint firstItem="ig4-Ky-GCj" firstAttribute="top" secondItem="UwM-me-GW5" secondAttribute="top" id="XEu-Pn-kFq"/>
                             <constraint firstAttribute="trailing" secondItem="9JE-Zw-CHd" secondAttribute="trailing" constant="20" id="XZT-Or-jBR"/>
+                            <constraint firstItem="ig4-Ky-GCj" firstAttribute="leading" secondItem="UwM-me-GW5" secondAttribute="leading" id="cK2-yL-PxB"/>
+                            <constraint firstAttribute="bottom" secondItem="ig4-Ky-GCj" secondAttribute="bottom" id="ei2-2U-H2U"/>
                             <constraint firstItem="Ngr-8j-TA4" firstAttribute="bottom" secondItem="9JE-Zw-CHd" secondAttribute="bottom" constant="15" id="inA-FS-rP7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ngr-8j-TA4"/>
                     </view>
+                    <connections>
+                        <outlet property="gameHighScore" destination="D2o-F4-dce" id="MBQ-NV-rZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5VO-C2-XTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-687.3046875" y="135.7247437774524"/>
+            <point key="canvasLocation" x="-688.40579710144937" y="135.26785714285714"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamescreen" translatesAutoresizingMaskIntoConstraints="NO" id="qVe-wZ-VTg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0eR-cM-dj7" userLabel="Parent Stack">
-                                <rect key="frame" x="20" y="40" width="728" height="964"/>
+                                <rect key="frame" x="20" y="40" width="280" height="508"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the COLOR, not the word." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-Gj-vKX">
-                                        <rect key="frame" x="155.5" y="0.0" width="417.5" height="91"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="48"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <size key="shadowOffset" width="2" height="2"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NPc-29-dyl">
-                                        <rect key="frame" x="298" y="101" width="132" height="148"/>
+                                        <rect key="frame" x="74" y="58" width="132" height="78"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
-                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="2" height="2"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-EF-mEx" userLabel="All Button Stack">
-                                        <rect key="frame" x="87.5" y="259" width="553" height="553.5"/>
+                                        <rect key="frame" x="0.0" y="146" width="280" height="280"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PjC-Uy-81W" userLabel="Top Button Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="553" height="272"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="135"/>
                                                 <subviews>
                                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie2-bi-9mO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="272"/>
-                                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ie2-bi-9mO" secondAttribute="height" multiplier="1:1" id="0ew-wN-SRi"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="AiA-bn-7i9"/>
@@ -129,8 +153,8 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wy3-lU-9Qb">
-                                                        <rect key="frame" x="281.5" y="0.0" width="271.5" height="272"/>
-                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="145" y="0.0" width="135" height="135"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="7Sg-gg-uVB"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="7g2-9n-uPd"/>
@@ -143,11 +167,11 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ltc-20-uox" userLabel="Bottom Button Stack">
-                                                <rect key="frame" x="0.0" y="282" width="553" height="271.5"/>
+                                                <rect key="frame" x="0.0" y="145" width="280" height="135"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ6-lW-Ouj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="271.5"/>
-                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Oly-1i-emO"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="QAs-EA-uPA"/>
@@ -158,8 +182,8 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0of-08-UJI">
-                                                        <rect key="frame" x="281.5" y="0.0" width="271.5" height="271.5"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="145" y="0.0" width="135" height="135"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="0of-08-UJI" secondAttribute="height" multiplier="1:1" id="6Kn-JF-TNH"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ffr-o9-CnE"/>
@@ -174,11 +198,11 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-aD-b7s">
-                                        <rect key="frame" x="276" y="822.5" width="176.5" height="141.5"/>
+                                        <rect key="frame" x="52" y="436" width="176.5" height="72"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <size key="shadowOffset" width="2" height="2"/>
                                     </label>
                                 </subviews>
@@ -186,10 +210,14 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="qVe-wZ-VTg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="76h-95-BHQ"/>
+                            <constraint firstAttribute="bottom" secondItem="qVe-wZ-VTg" secondAttribute="bottom" id="AWt-1Y-R8v"/>
+                            <constraint firstItem="qVe-wZ-VTg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mq3-OZ-ePf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0eR-cM-dj7" secondAttribute="trailing" constant="20" id="PtV-lv-VtF"/>
                             <constraint firstItem="0eR-cM-dj7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j27-EM-x6U"/>
                             <constraint firstItem="0eR-cM-dj7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nKS-FN-Gc7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0eR-cM-dj7" secondAttribute="bottom" constant="20" id="pFQ-Ih-HUm"/>
+                            <constraint firstAttribute="trailing" secondItem="qVe-wZ-VTg" secondAttribute="trailing" id="wAf-Rp-K1L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -200,6 +228,10 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                         <outlet property="boxTR" destination="wy3-lU-9Qb" id="Oby-bh-Ihf"/>
                         <outlet property="colorWordLabel" destination="NPc-29-dyl" id="fSM-Vg-FC7"/>
                         <outlet property="timerLabel" destination="FOu-aD-b7s" id="Xcu-jj-rVn"/>
+                        <outletCollection property="colorButtons" destination="ie2-bi-9mO" collectionClass="NSMutableArray" id="vVu-gs-dBb"/>
+                        <outletCollection property="colorButtons" destination="wy3-lU-9Qb" collectionClass="NSMutableArray" id="pDy-lb-sS2"/>
+                        <outletCollection property="colorButtons" destination="tJ6-lW-Ouj" collectionClass="NSMutableArray" id="J3Y-uI-lgf"/>
+                        <outletCollection property="colorButtons" destination="0of-08-UJI" collectionClass="NSMutableArray" id="50V-2H-y4C"/>
                         <segue destination="ajM-Mv-quZ" kind="presentation" identifier="endGameSegue" id="V0r-8C-Uzy"/>
                     </connections>
                 </viewController>
@@ -212,45 +244,46 @@ A series of words will be displayed in a separate series of colors. Ignore the w
             <objects>
                 <viewController id="ajM-Mv-quZ" customClass="ScoreScreenViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gWC-F2-e7A">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scorescreen" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-X4-Ypz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="EHJ-8u-kDW">
-                                <rect key="frame" x="20" y="40" width="728" height="964"/>
+                                <rect key="frame" x="20" y="40" width="280" height="508"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-ma-Tb0">
-                                        <rect key="frame" x="0.0" y="0.0" width="728" height="822"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-ma-Tb0">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="366"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="xqs-Mk-OtT">
-                                                <rect key="frame" x="0.0" y="0.0" width="728" height="117.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="75.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="2" height="2"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-ga-uhK">
-                                                <rect key="frame" x="0.0" y="187.5" width="728" height="117.5"/>
+                                                <rect key="frame" x="0.0" y="145.5" width="280" height="75"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="shadowColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <size key="shadowOffset" width="2" height="2"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="9IL-i1-RGH">
-                                                <rect key="frame" x="0.0" y="375" width="728" height="447"/>
-                                                <string key="text">New High Score!
-🎉 🥳  🎉 🥳 🎉 🥳 🎉</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="9IL-i1-RGH">
+                                                <rect key="frame" x="0.0" y="290.5" width="280" height="75.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="49"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.75166147949999995" green="0.64609736200000001" blue="0.2939261198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <size key="shadowOffset" width="2" height="2"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bON-HL-c6l">
-                                        <rect key="frame" x="200" y="914" width="328" height="50"/>
+                                        <rect key="frame" x="40" y="458" width="200" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8hp-iN-2jr"/>
                                             <constraint firstAttribute="height" constant="50" id="O7F-Cv-DC1"/>
@@ -259,8 +292,8 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                         <size key="titleShadowOffset" width="2" height="2"/>
                                         <state key="normal" title="Play Again?">
-                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <variation key="widthClass=regular">
                                             <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
@@ -279,8 +312,12 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3vx-X4-Ypz" secondAttribute="bottom" id="3VO-U5-md0"/>
                             <constraint firstItem="EHJ-8u-kDW" firstAttribute="top" secondItem="UuS-Hg-pMj" secondAttribute="top" constant="20" id="C4z-ll-Vao"/>
                             <constraint firstItem="UuS-Hg-pMj" firstAttribute="trailing" secondItem="EHJ-8u-kDW" secondAttribute="trailing" constant="20" id="EPQ-xW-To7"/>
+                            <constraint firstAttribute="trailing" secondItem="3vx-X4-Ypz" secondAttribute="trailing" id="Exm-l8-qFT"/>
+                            <constraint firstItem="3vx-X4-Ypz" firstAttribute="leading" secondItem="gWC-F2-e7A" secondAttribute="leading" id="NYQ-Rn-DbL"/>
+                            <constraint firstItem="3vx-X4-Ypz" firstAttribute="top" secondItem="gWC-F2-e7A" secondAttribute="top" id="Uub-lO-17i"/>
                             <constraint firstItem="EHJ-8u-kDW" firstAttribute="leading" secondItem="UuS-Hg-pMj" secondAttribute="leading" constant="20" id="Xjz-JH-GF6"/>
                             <constraint firstItem="UuS-Hg-pMj" firstAttribute="bottom" secondItem="EHJ-8u-kDW" secondAttribute="bottom" constant="20" id="ru6-4x-JHU"/>
                         </constraints>
@@ -297,4 +334,10 @@ A series of words will be displayed in a separate series of colors. Ignore the w
             <point key="canvasLocation" x="1011.5942028985507" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1df7afc9" width="1008" height="1255"/>
+        <image name="gamescreen" width="1920" height="1200"/>
+        <image name="scorescreen" width="2560" height="1600"/>
+        <image name="startscreen" width="1771" height="1596"/>
+    </resources>
 </document>

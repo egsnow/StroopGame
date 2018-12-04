@@ -9,64 +9,62 @@
 import Foundation
 
 protocol GameDelegate {
-    
     func resetGameLabels(timeRemaining: Int)
     func gameOver()
-    
     func updateTimerLabel(timeRemaining: Int)
-    
 }
 
 class GameModel {
-
-    
     
     // MARK:- variables & constants
     ///Keeps track of game timer.
-    private let totalGameTime = 6
+    private let totalGameTime = 15
     var timeRemaining = 0
     var timerIsRunning = false
     private var gameTimer: Timer?
 
     ///Keeps track of game score and high score.
+    var delegate: GameDelegate?
     private let newGameScore = 0
     var currentScore = 0
     var highScore = 0
     var highScoreIsNew = false
     var answerIsCorrect = false
-    var oldWordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
-    var wordsArray = ["BLUE", "RED", "YELLOW", "GREEN"]
-
-    var delegate: GameDelegate?
+    var oldXmasWordsArray: [String]
+    var xmasWordsArray: [String]
     
+    init(words: [String]) {
+        self.xmasWordsArray = words
+        self.oldXmasWordsArray = words
+    }
     
     // MARK:- functions
     ///Game logic - Starts the clock. Increments points for correct selections. Ends game for incorrect selections.
     func playGame() {
         if answerIsCorrect == true && timerIsRunning == false {
             startTimer()
+            playSound("bip")
         } else if answerIsCorrect == true && timerIsRunning == true {
             currentScore += 1
+            playSound("correct")
         } else if answerIsCorrect == false && timerIsRunning == true {
             endGame()
+            playSound("error")
         } else if answerIsCorrect == false && timerIsRunning == false {
         }
     }
-    
-    
     
     ///Tracks and updates highscore variable when new high score is achieved.
     func updateHighScore() {
         if highScore < currentScore {
             highScore = currentScore
             highScoreIsNew = true
+            playSound("fonfar")
             UserDefaults.standard.set(highScore, forKey: "highScore")
         } else if highScore >= currentScore {
             highScoreIsNew = false
         }
     }
-    
-    
     
     ///Resets all variables and constants to initial settings.
     func startNewGame() {
@@ -77,8 +75,6 @@ class GameModel {
         delegate?.resetGameLabels(timeRemaining: timeRemaining)
     }
     
-    
-    
     ///Passes end game function for incorrect answer selection during game logic.
     private func endGame() {
         gameTimer?.invalidate()
@@ -86,8 +82,6 @@ class GameModel {
         delegate?.gameOver()
     }
 
-    
-    
     ///Game timer logic.
     private func startTimer() {
         timerIsRunning = true
@@ -98,13 +92,8 @@ class GameModel {
             if  self.timeRemaining <= 0 {
                 self.endGame()
             }
-
         }
     }
-    
-    
-
-
 }
 
 

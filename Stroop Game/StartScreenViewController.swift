@@ -10,9 +10,18 @@ import UIKit
 
 class StartScreenViewController: UIViewController {
 
+    
+    @IBOutlet weak var gameHighScore: UILabel!
+    
+    let highscore = UserDefaults.standard.integer(forKey: "highScore")
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        gameHighScore.text = "High Score: \(highscore)"
+        
+        
     }
     
 
