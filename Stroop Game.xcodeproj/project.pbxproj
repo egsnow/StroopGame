@@ -20,6 +20,31 @@
 		0F4B895B21B6F8AA009D4270 /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B895521B6F8AA009D4270 /* error.mp3 */; };
 		0F4B895C21B6F8AA009D4270 /* PlaySoundFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B895621B6F8AA009D4270 /* PlaySoundFunction.swift */; };
 		0F4B895D21B6F8AA009D4270 /* fonfar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B895721B6F8AA009D4270 /* fonfar.mp3 */; };
+		0F9307A921B85CB600558FC3 /* ES American.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F93079C21B85CB500558FC3 /* ES American.ttf */; };
+		0F9307AA21B85CB600558FC3 /* ES Gingerbread.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F93079D21B85CB500558FC3 /* ES Gingerbread.ttf */; };
+		0F9307AB21B85CB600558FC3 /* ES Euphoria.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F93079E21B85CB500558FC3 /* ES Euphoria.ttf */; };
+		0F9307AC21B85CB600558FC3 /* ES Revolt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F93079F21B85CB500558FC3 /* ES Revolt.ttf */; };
+		0F9307AD21B85CB600558FC3 /* ES Cityscape.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A021B85CB500558FC3 /* ES Cityscape.ttf */; };
+		0F9307AE21B85CB600558FC3 /* ES Kingthings Willow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A121B85CB500558FC3 /* ES Kingthings Willow.ttf */; };
+		0F9307AF21B85CB600558FC3 /* ES Kingthings.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A221B85CB500558FC3 /* ES Kingthings.ttf */; };
+		0F9307B021B85CB600558FC3 /* ES Exotica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A321B85CB500558FC3 /* ES Exotica.ttf */; };
+		0F9307B121B85CB600558FC3 /* ES Fantastic Pete.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A421B85CB500558FC3 /* ES Fantastic Pete.ttf */; };
+		0F9307B221B85CB600558FC3 /* ES Moonstar.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A521B85CB500558FC3 /* ES Moonstar.ttf */; };
+		0F9307B321B85CB600558FC3 /* ES Valentine.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A621B85CB500558FC3 /* ES Valentine.ttf */; };
+		0F9307B421B85CB600558FC3 /* ES Snowfall.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A721B85CB600558FC3 /* ES Snowfall.ttf */; };
+		0F9307B521B85CB600558FC3 /* ES Merry Christmas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307A821B85CB600558FC3 /* ES Merry Christmas.ttf */; };
+		0F9307B721B8617B00558FC3 /* ES Christmabet.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307B621B8617B00558FC3 /* ES Christmabet.ttf */; };
+		0F9307B921B861C700558FC3 /* ES Christmas Eve.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307B821B861C700558FC3 /* ES Christmas Eve.ttf */; };
+		0F9307BC21B8624500558FC3 /* ES Merry Christmas Flake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307BA21B8624500558FC3 /* ES Merry Christmas Flake.ttf */; };
+		0F9307BD21B8624500558FC3 /* ES Merry Christmas Star.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307BB21B8624500558FC3 /* ES Merry Christmas Star.ttf */; };
+		0F9307BF21B8629D00558FC3 /* ES Hello Christmas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307BE21B8629D00558FC3 /* ES Hello Christmas.ttf */; };
+		0F9307C221B8630500558FC3 /* ES Christmas Lights Outdoor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307C021B8630500558FC3 /* ES Christmas Lights Outdoor.ttf */; };
+		0F9307C321B8630500558FC3 /* ES Christmas Lights Indoor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307C121B8630500558FC3 /* ES Christmas Lights Indoor.ttf */; };
+		0F9307C621B8635200558FC3 /* ES Christmas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307C421B8635200558FC3 /* ES Christmas.ttf */; };
+		0F9307C721B8635200558FC3 /* ES Flakes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307C521B8635200558FC3 /* ES Flakes.ttf */; };
+		0F9307C921B8638300558FC3 /* ES Christmas Sounds.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307C821B8638300558FC3 /* ES Christmas Sounds.ttf */; };
+		0F9307CB21B863AC00558FC3 /* ES Christmas Tinsel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307CA21B863AC00558FC3 /* ES Christmas Tinsel.ttf */; };
+		0F9307CD21B863D300558FC3 /* ES Kingthings Christmas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307CC21B863D300558FC3 /* ES Kingthings Christmas.ttf */; };
 		0FD2F3D32184077100F50A4F /* ScoreScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +64,31 @@
 		0F4B895521B6F8AA009D4270 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 		0F4B895621B6F8AA009D4270 /* PlaySoundFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundFunction.swift; sourceTree = "<group>"; };
 		0F4B895721B6F8AA009D4270 /* fonfar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fonfar.mp3; sourceTree = "<group>"; };
+		0F93079C21B85CB500558FC3 /* ES American.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES American.ttf"; sourceTree = "<group>"; };
+		0F93079D21B85CB500558FC3 /* ES Gingerbread.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Gingerbread.ttf"; sourceTree = "<group>"; };
+		0F93079E21B85CB500558FC3 /* ES Euphoria.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Euphoria.ttf"; sourceTree = "<group>"; };
+		0F93079F21B85CB500558FC3 /* ES Revolt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Revolt.ttf"; sourceTree = "<group>"; };
+		0F9307A021B85CB500558FC3 /* ES Cityscape.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Cityscape.ttf"; sourceTree = "<group>"; };
+		0F9307A121B85CB500558FC3 /* ES Kingthings Willow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Kingthings Willow.ttf"; sourceTree = "<group>"; };
+		0F9307A221B85CB500558FC3 /* ES Kingthings.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Kingthings.ttf"; sourceTree = "<group>"; };
+		0F9307A321B85CB500558FC3 /* ES Exotica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Exotica.ttf"; sourceTree = "<group>"; };
+		0F9307A421B85CB500558FC3 /* ES Fantastic Pete.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Fantastic Pete.ttf"; sourceTree = "<group>"; };
+		0F9307A521B85CB500558FC3 /* ES Moonstar.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Moonstar.ttf"; sourceTree = "<group>"; };
+		0F9307A621B85CB500558FC3 /* ES Valentine.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Valentine.ttf"; sourceTree = "<group>"; };
+		0F9307A721B85CB600558FC3 /* ES Snowfall.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Snowfall.ttf"; sourceTree = "<group>"; };
+		0F9307A821B85CB600558FC3 /* ES Merry Christmas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Merry Christmas.ttf"; sourceTree = "<group>"; };
+		0F9307B621B8617B00558FC3 /* ES Christmabet.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmabet.ttf"; sourceTree = "<group>"; };
+		0F9307B821B861C700558FC3 /* ES Christmas Eve.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmas Eve.ttf"; sourceTree = "<group>"; };
+		0F9307BA21B8624500558FC3 /* ES Merry Christmas Flake.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Merry Christmas Flake.ttf"; sourceTree = "<group>"; };
+		0F9307BB21B8624500558FC3 /* ES Merry Christmas Star.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Merry Christmas Star.ttf"; sourceTree = "<group>"; };
+		0F9307BE21B8629D00558FC3 /* ES Hello Christmas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Hello Christmas.ttf"; sourceTree = "<group>"; };
+		0F9307C021B8630500558FC3 /* ES Christmas Lights Outdoor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmas Lights Outdoor.ttf"; sourceTree = "<group>"; };
+		0F9307C121B8630500558FC3 /* ES Christmas Lights Indoor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmas Lights Indoor.ttf"; sourceTree = "<group>"; };
+		0F9307C421B8635200558FC3 /* ES Christmas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmas.ttf"; sourceTree = "<group>"; };
+		0F9307C521B8635200558FC3 /* ES Flakes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Flakes.ttf"; sourceTree = "<group>"; };
+		0F9307C821B8638300558FC3 /* ES Christmas Sounds.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmas Sounds.ttf"; sourceTree = "<group>"; };
+		0F9307CA21B863AC00558FC3 /* ES Christmas Tinsel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmas Tinsel.ttf"; sourceTree = "<group>"; };
+		0F9307CC21B863D300558FC3 /* ES Kingthings Christmas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Kingthings Christmas.ttf"; sourceTree = "<group>"; };
 		0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +124,7 @@
 		0F1A343B2189486C00873F96 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F93079B21B8597F00558FC3 /* Fonts */,
 				0F4B895221B6F8A9009D4270 /* bip.mp3 */,
 				0F4B895421B6F8A9009D4270 /* clack.mp3 */,
 				0F4B895321B6F8A9009D4270 /* correct.mp3 */,
@@ -113,6 +164,38 @@
 				0F1A343B2189486C00873F96 /* Supporting Files */,
 			);
 			path = "Stroop Game";
+			sourceTree = "<group>";
+		};
+		0F93079B21B8597F00558FC3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F9307A021B85CB500558FC3 /* ES Cityscape.ttf */,
+				0F93079E21B85CB500558FC3 /* ES Euphoria.ttf */,
+				0F9307A321B85CB500558FC3 /* ES Exotica.ttf */,
+				0F9307A421B85CB500558FC3 /* ES Fantastic Pete.ttf */,
+				0F9307A121B85CB500558FC3 /* ES Kingthings Willow.ttf */,
+				0F9307A221B85CB500558FC3 /* ES Kingthings.ttf */,
+				0F9307B621B8617B00558FC3 /* ES Christmabet.ttf */,
+				0F9307A821B85CB600558FC3 /* ES Merry Christmas.ttf */,
+				0F9307BA21B8624500558FC3 /* ES Merry Christmas Flake.ttf */,
+				0F9307C421B8635200558FC3 /* ES Christmas.ttf */,
+				0F9307C521B8635200558FC3 /* ES Flakes.ttf */,
+				0F9307CA21B863AC00558FC3 /* ES Christmas Tinsel.ttf */,
+				0F9307BE21B8629D00558FC3 /* ES Hello Christmas.ttf */,
+				0F9307C821B8638300558FC3 /* ES Christmas Sounds.ttf */,
+				0F9307BB21B8624500558FC3 /* ES Merry Christmas Star.ttf */,
+				0F9307CC21B863D300558FC3 /* ES Kingthings Christmas.ttf */,
+				0F9307A521B85CB500558FC3 /* ES Moonstar.ttf */,
+				0F9307B821B861C700558FC3 /* ES Christmas Eve.ttf */,
+				0F9307C121B8630500558FC3 /* ES Christmas Lights Indoor.ttf */,
+				0F9307C021B8630500558FC3 /* ES Christmas Lights Outdoor.ttf */,
+				0F93079D21B85CB500558FC3 /* ES Gingerbread.ttf */,
+				0F9307A721B85CB600558FC3 /* ES Snowfall.ttf */,
+				0F93079C21B85CB500558FC3 /* ES American.ttf */,
+				0F9307A621B85CB500558FC3 /* ES Valentine.ttf */,
+				0F93079F21B85CB500558FC3 /* ES Revolt.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,12 +256,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F9307BC21B8624500558FC3 /* ES Merry Christmas Flake.ttf in Resources */,
+				0F9307C921B8638300558FC3 /* ES Christmas Sounds.ttf in Resources */,
 				0F4B895921B6F8AA009D4270 /* correct.mp3 in Resources */,
+				0F9307BF21B8629D00558FC3 /* ES Hello Christmas.ttf in Resources */,
+				0F9307AE21B85CB600558FC3 /* ES Kingthings Willow.ttf in Resources */,
 				0F4B895821B6F8AA009D4270 /* bip.mp3 in Resources */,
+				0F9307B321B85CB600558FC3 /* ES Valentine.ttf in Resources */,
 				0F26319F21718B2B006026F1 /* LaunchScreen.storyboard in Resources */,
+				0F9307CB21B863AC00558FC3 /* ES Christmas Tinsel.ttf in Resources */,
+				0F9307B921B861C700558FC3 /* ES Christmas Eve.ttf in Resources */,
+				0F9307B021B85CB600558FC3 /* ES Exotica.ttf in Resources */,
+				0F9307AC21B85CB600558FC3 /* ES Revolt.ttf in Resources */,
+				0F9307C221B8630500558FC3 /* ES Christmas Lights Outdoor.ttf in Resources */,
 				0F4B895A21B6F8AA009D4270 /* clack.mp3 in Resources */,
+				0F9307B521B85CB600558FC3 /* ES Merry Christmas.ttf in Resources */,
+				0F9307AB21B85CB600558FC3 /* ES Euphoria.ttf in Resources */,
+				0F9307B721B8617B00558FC3 /* ES Christmabet.ttf in Resources */,
+				0F9307C721B8635200558FC3 /* ES Flakes.ttf in Resources */,
+				0F9307BD21B8624500558FC3 /* ES Merry Christmas Star.ttf in Resources */,
+				0F9307B121B85CB600558FC3 /* ES Fantastic Pete.ttf in Resources */,
+				0F9307CD21B863D300558FC3 /* ES Kingthings Christmas.ttf in Resources */,
+				0F9307B421B85CB600558FC3 /* ES Snowfall.ttf in Resources */,
+				0F9307C321B8630500558FC3 /* ES Christmas Lights Indoor.ttf in Resources */,
+				0F9307AA21B85CB600558FC3 /* ES Gingerbread.ttf in Resources */,
+				0F9307A921B85CB600558FC3 /* ES American.ttf in Resources */,
 				0F4B895D21B6F8AA009D4270 /* fonfar.mp3 in Resources */,
+				0F9307C621B8635200558FC3 /* ES Christmas.ttf in Resources */,
 				0F26319C21718B2B006026F1 /* Assets.xcassets in Resources */,
+				0F9307AF21B85CB600558FC3 /* ES Kingthings.ttf in Resources */,
+				0F9307AD21B85CB600558FC3 /* ES Cityscape.ttf in Resources */,
+				0F9307B221B85CB600558FC3 /* ES Moonstar.ttf in Resources */,
 				0F4B895B21B6F8AA009D4270 /* error.mp3 in Resources */,
 				0F26319A21718B2A006026F1 /* Main.storyboard in Resources */,
 			);

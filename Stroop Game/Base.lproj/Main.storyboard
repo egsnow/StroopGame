@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHH-Vr-amb">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,69 +8,80 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ES Christmabet.ttf">
+            <string>Christmabet</string>
+        </array>
+        <array key="ES Kingthings Christmas.ttf">
+            <string>KingthingsChristmas2</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Start Screen View Controller-->
         <scene sceneID="but-Ju-oGB">
             <objects>
                 <viewController id="uHH-Vr-amb" customClass="StartScreenViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UwM-me-GW5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startscreen" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-Ky-GCj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scorescreen" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-Ky-GCj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="9JE-Zw-CHd">
-                                <rect key="frame" x="20" y="35" width="280" height="518"/>
+                                <rect key="frame" x="20" y="59" width="374" height="788"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="72" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8RX-Uf-DNA">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="318"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="8RX-Uf-DNA">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="588"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="STROOP GAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="afA-yT-awV">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="89.5"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="75"/>
-                                                <color key="textColor" red="0.54971480369567871" green="0.17317205667495728" blue="0.11752098053693771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Stroop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="afA-yT-awV">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="101"/>
+                                                <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="98"/>
+                                                <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="shadowOffset" width="2" height="2"/>
+                                                <size key="shadowOffset" width="3" height="3"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="150"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Oe-wlU">
-                                                <rect key="frame" x="0.5" y="108.5" width="279.5" height="89"/>
+                                                <rect key="frame" x="10" y="152.00000000000003" width="354" height="349.66666666666674"/>
                                                 <string key="text">Game Instructions:
 
 A series of words will be displayed in a separate series of colors. Ignore the word and tap the color in order to earn a point.  </string>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="39"/>
+                                                <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <size key="shadowOffset" width="2" height="2"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                                    <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="40"/>
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-F4-dce">
-                                                <rect key="frame" x="45" y="228.5" width="190" height="89.5"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="115.33333333333336" y="552.33333333333337" width="143.66666666666663" height="35.666666666666629"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="30"/>
+                                                <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="2" height="2"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                                    <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="65"/>
                                                 </variation>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM3-Tr-jUT">
-                                        <rect key="frame" x="80" y="368" width="120" height="150"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM3-Tr-jUT">
+                                        <rect key="frame" x="112" y="638" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="98y-UW-vxc"/>
-                                            <constraint firstAttribute="width" constant="120" id="LaP-Er-WCF"/>
+                                            <constraint firstAttribute="width" constant="150" id="LaP-Er-WCF"/>
                                         </constraints>
-                                        <size key="titleShadowOffset" width="2" height="2"/>
-                                        <state key="normal" image="1df7afc9">
+                                        <size key="titleShadowOffset" width="4" height="4"/>
+                                        <state key="normal" image="b8f7605a373f79a135c5426edf196c52">
                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="presentation" id="ZxK-XE-Kwn"/>
@@ -106,39 +117,34 @@ A series of words will be displayed in a separate series of colors. Ignore the w
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamescreen" translatesAutoresizingMaskIntoConstraints="NO" id="qVe-wZ-VTg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="987654321" translatesAutoresizingMaskIntoConstraints="NO" id="qVe-wZ-VTg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0eR-cM-dj7" userLabel="Parent Stack">
-                                <rect key="frame" x="20" y="40" width="280" height="508"/>
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the COLOR, not the word." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-Gj-vKX">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="48"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <size key="shadowOffset" width="2" height="2"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NPc-29-dyl">
-                                        <rect key="frame" x="74" y="58" width="132" height="78"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
+                                        <rect key="frame" x="81.333333333333329" y="0.0" width="211.33333333333337" height="134"/>
+                                        <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="65"/>
                                         <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="2" height="2"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="80"/>
+                                        </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-EF-mEx" userLabel="All Button Stack">
-                                        <rect key="frame" x="0.0" y="146" width="280" height="280"/>
+                                        <rect key="frame" x="0.0" y="144" width="374" height="374"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PjC-Uy-81W" userLabel="Top Button Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="135"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
                                                 <subviews>
                                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie2-bi-9mO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ie2-bi-9mO" secondAttribute="height" multiplier="1:1" id="0ew-wN-SRi"/>
@@ -153,7 +159,7 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wy3-lU-9Qb">
-                                                        <rect key="frame" x="145" y="0.0" width="135" height="135"/>
+                                                        <rect key="frame" x="192" y="0.0" width="182" height="182"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="7Sg-gg-uVB"/>
@@ -167,10 +173,10 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ltc-20-uox" userLabel="Bottom Button Stack">
-                                                <rect key="frame" x="0.0" y="145" width="280" height="135"/>
+                                                <rect key="frame" x="0.0" y="192" width="374" height="182"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ6-lW-Ouj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Oly-1i-emO"/>
@@ -182,7 +188,7 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0of-08-UJI">
-                                                        <rect key="frame" x="145" y="0.0" width="135" height="135"/>
+                                                        <rect key="frame" x="192" y="0.0" width="182" height="182"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="0of-08-UJI" secondAttribute="height" multiplier="1:1" id="6Kn-JF-TNH"/>
@@ -198,12 +204,15 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-aD-b7s">
-                                        <rect key="frame" x="52" y="436" width="176.5" height="72"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="113.00000000000001" y="528" width="148.33333333333337" height="250"/>
+                                        <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="45"/>
+                                        <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="2" height="2"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="55"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                             </stackView>
@@ -244,59 +253,59 @@ A series of words will be displayed in a separate series of colors. Ignore the w
             <objects>
                 <viewController id="ajM-Mv-quZ" customClass="ScoreScreenViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gWC-F2-e7A">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scorescreen" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-X4-Ypz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="963852741" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-X4-Ypz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="EHJ-8u-kDW">
-                                <rect key="frame" x="20" y="40" width="280" height="508"/>
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-ma-Tb0">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="366"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="636"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="xqs-Mk-OtT">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="75.5"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="165.33333333333334"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="55"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-ga-uhK">
+                                                <rect key="frame" x="0.0" y="235.33333333333331" width="374" height="165.33333333333331"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="55"/>
                                                 <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="shadowOffset" width="2" height="2"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-ga-uhK">
-                                                <rect key="frame" x="0.0" y="145.5" width="280" height="75"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
-                                                <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <size key="shadowOffset" width="2" height="2"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="9IL-i1-RGH">
-                                                <rect key="frame" x="0.0" y="290.5" width="280" height="75.5"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="49"/>
-                                                <color key="textColor" red="0.75166147949999995" green="0.64609736200000001" blue="0.2939261198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="0.0" y="470.66666666666657" width="374" height="165.33333333333331"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="55"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <size key="shadowOffset" width="2" height="2"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bON-HL-c6l">
-                                        <rect key="frame" x="40" y="458" width="200" height="50"/>
+                                        <rect key="frame" x="85" y="728" width="204" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8hp-iN-2jr"/>
                                             <constraint firstAttribute="height" constant="50" id="O7F-Cv-DC1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="30"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                         <size key="titleShadowOffset" width="2" height="2"/>
                                         <state key="normal" title="Play Again?">
-                                            <color key="titleColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <variation key="widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
+                                            <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="50"/>
                                         </variation>
                                         <connections>
                                             <action selector="playAgainButton" destination="ajM-Mv-quZ" eventType="touchUpInside" id="4PU-MV-WyC"/>
@@ -335,9 +344,9 @@ A series of words will be displayed in a separate series of colors. Ignore the w
         </scene>
     </scenes>
     <resources>
-        <image name="1df7afc9" width="1008" height="1255"/>
-        <image name="gamescreen" width="1920" height="1200"/>
+        <image name="963852741" width="614.4000244140625" height="384"/>
+        <image name="987654321" width="1920" height="1080"/>
+        <image name="b8f7605a373f79a135c5426edf196c52" width="241.44000244140625" height="241.44000244140625"/>
         <image name="scorescreen" width="2560" height="1600"/>
-        <image name="startscreen" width="1771" height="1596"/>
     </resources>
 </document>

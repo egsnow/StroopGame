@@ -2,6 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ES Cityscape</string>
+		<string>ES Euphoria</string>
+		<string>ES Exotica</string>
+		<string>ES Fantastic Pete</string>
+		<string>ES Kingthings Willow</string>
+		<string>ES Kingthings</string>
+		<string>ES Merry Christmas</string>
+		<string>ES Moonstar</string>
+		<string>ES Gingerbread</string>
+		<string>ES Snowfall</string>
+		<string>ES American</string>
+		<string>ES Valentine</string>
+		<string>ES Revolt</string>
+		<string>ES Christmabet</string>
+		<string>ES Merry Christmas Flake</string>
+		<string>ES Christmas</string>
+		<string>ES Christmas Tinsel</string>
+		<string>ES Hello Christmas</string>
+		<string>ES Christmas Sounds</string>
+		<string>ES Merry Christmas Star</string>
+		<string>ES Kingthings Christmas</string>
+		<string>ES Christmas Eve</string>
+		<string>ES Christmas Lights Indoor
+</string>
+		<string>ES Christmas Lights Outdoor</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
