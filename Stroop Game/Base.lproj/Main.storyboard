@@ -25,47 +25,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scorescreen" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-Ky-GCj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="963852741" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-Ky-GCj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="9JE-Zw-CHd">
                                 <rect key="frame" x="20" y="59" width="374" height="788"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="8RX-Uf-DNA">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="588"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8RX-Uf-DNA">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="628"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Stroop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="afA-yT-awV">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="101"/>
-                                                <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="98"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Stroop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afA-yT-awV">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="93"/>
+                                                <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="90"/>
                                                 <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="3" height="3"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="150"/>
-                                                </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Oe-wlU">
-                                                <rect key="frame" x="10" y="152.00000000000003" width="354" height="349.66666666666674"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Oe-wlU">
+                                                <rect key="frame" x="0.0" y="103.00000000000003" width="374" height="463.66666666666674"/>
                                                 <string key="text">Game Instructions:
 
 A series of words will be displayed in a separate series of colors. Ignore the word and tap the color in order to earn a point.  </string>
-                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="39"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="65"/>
                                                 <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="40"/>
+                                                    <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="50"/>
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-F4-dce">
-                                                <rect key="frame" x="115.33333333333336" y="552.33333333333337" width="143.66666666666663" height="35.666666666666629"/>
-                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="576.66666666666663" width="374" height="51.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="45"/>
                                                 <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="shadowOffset" width="2" height="2"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="65"/>
                                                 </variation>
@@ -73,13 +70,13 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM3-Tr-jUT">
-                                        <rect key="frame" x="112" y="638" width="150" height="150"/>
+                                        <rect key="frame" x="127" y="638" width="120" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="98y-UW-vxc"/>
-                                            <constraint firstAttribute="width" constant="150" id="LaP-Er-WCF"/>
+                                            <constraint firstAttribute="width" constant="120" id="LaP-Er-WCF"/>
                                         </constraints>
                                         <size key="titleShadowOffset" width="4" height="4"/>
-                                        <state key="normal" image="b8f7605a373f79a135c5426edf196c52">
+                                        <state key="normal" image="1df7afc9">
                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -88,7 +85,12 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         </connections>
                                     </button>
                                 </subviews>
-                                <variation key="heightClass=regular-widthClass=compact" spacing="50"/>
+                                <constraints>
+                                    <constraint firstItem="8RX-Uf-DNA" firstAttribute="leading" secondItem="9JE-Zw-CHd" secondAttribute="leading" id="LOW-hW-Y3y"/>
+                                    <constraint firstAttribute="trailing" secondItem="8RX-Uf-DNA" secondAttribute="trailing" id="bWd-XX-lkP"/>
+                                    <constraint firstItem="oM3-Tr-jUT" firstAttribute="top" secondItem="8RX-Uf-DNA" secondAttribute="bottom" constant="10" id="eWb-Wu-vR5"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" spacing="10"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,6 +108,8 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                     </view>
                     <connections>
                         <outlet property="gameHighScore" destination="D2o-F4-dce" id="MBQ-NV-rZR"/>
+                        <outlet property="gameLogo" destination="afA-yT-awV" id="abF-cx-3dQ"/>
+                        <outlet property="startButton" destination="oM3-Tr-jUT" id="r0W-lj-snV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5VO-C2-XTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -127,18 +131,18 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                 <rect key="frame" x="20" y="64" width="374" height="778"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NPc-29-dyl">
-                                        <rect key="frame" x="81.333333333333329" y="0.0" width="211.33333333333337" height="134"/>
+                                        <rect key="frame" x="116.33333333333336" y="0.0" width="141.66666666666663" height="234"/>
                                         <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="65"/>
                                         <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="2" height="2"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="80"/>
                                         </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-EF-mEx" userLabel="All Button Stack">
-                                        <rect key="frame" x="0.0" y="144" width="374" height="374"/>
+                                        <rect key="frame" x="0.0" y="244" width="374" height="374"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PjC-Uy-81W" userLabel="Top Button Stack">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
@@ -204,7 +208,11 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-aD-b7s">
-                                        <rect key="frame" x="113.00000000000001" y="528" width="148.33333333333337" height="250"/>
+                                        <rect key="frame" x="112" y="628" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="97z-db-tay"/>
+                                            <constraint firstAttribute="height" constant="150" id="e1V-p6-Vbe"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="45"/>
                                         <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -256,56 +264,56 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="963852741" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-X4-Ypz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scorescreen" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-X4-Ypz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="EHJ-8u-kDW">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="EHJ-8u-kDW">
                                 <rect key="frame" x="20" y="64" width="374" height="778"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-ma-Tb0">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="636"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-ma-Tb0">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="688"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="xqs-Mk-OtT">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="165.33333333333334"/>
-                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="55"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="222.66666666666666"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="70"/>
+                                                <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-ga-uhK">
-                                                <rect key="frame" x="0.0" y="235.33333333333331" width="374" height="165.33333333333331"/>
-                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="55"/>
+                                                <rect key="frame" x="0.0" y="232.66666666666669" width="374" height="222.66666666666669"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="70"/>
                                                 <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="9IL-i1-RGH">
-                                                <rect key="frame" x="0.0" y="470.66666666666657" width="374" height="165.33333333333331"/>
-                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="55"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="465.33333333333343" width="374" height="222.66666666666669"/>
+                                                <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="65"/>
+                                                <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bON-HL-c6l">
-                                        <rect key="frame" x="85" y="728" width="204" height="50"/>
+                                        <rect key="frame" x="51" y="728" width="272" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8hp-iN-2jr"/>
                                             <constraint firstAttribute="height" constant="50" id="O7F-Cv-DC1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="40"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                         <size key="titleShadowOffset" width="2" height="2"/>
                                         <state key="normal" title="Play Again?">
-                                            <color key="titleColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <variation key="widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="50"/>
+                                            <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="60"/>
                                         </variation>
                                         <connections>
                                             <action selector="playAgainButton" destination="ajM-Mv-quZ" eventType="touchUpInside" id="4PU-MV-WyC"/>
@@ -344,9 +352,9 @@ A series of words will be displayed in a separate series of colors. Ignore the w
         </scene>
     </scenes>
     <resources>
+        <image name="1df7afc9" width="1008" height="1255"/>
         <image name="963852741" width="614.4000244140625" height="384"/>
         <image name="987654321" width="1920" height="1080"/>
-        <image name="b8f7605a373f79a135c5426edf196c52" width="241.44000244140625" height="241.44000244140625"/>
         <image name="scorescreen" width="2560" height="1600"/>
     </resources>
 </document>

@@ -45,6 +45,7 @@
 		0F9307C921B8638300558FC3 /* ES Christmas Sounds.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307C821B8638300558FC3 /* ES Christmas Sounds.ttf */; };
 		0F9307CB21B863AC00558FC3 /* ES Christmas Tinsel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307CA21B863AC00558FC3 /* ES Christmas Tinsel.ttf */; };
 		0F9307CD21B863D300558FC3 /* ES Kingthings Christmas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9307CC21B863D300558FC3 /* ES Kingthings Christmas.ttf */; };
+		0F9307D021B9C4EE00558FC3 /* LabelWithAdaptiveTextHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9307CF21B9C4EE00558FC3 /* LabelWithAdaptiveTextHeight.swift */; };
 		0FD2F3D32184077100F50A4F /* ScoreScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		0F9307C821B8638300558FC3 /* ES Christmas Sounds.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmas Sounds.ttf"; sourceTree = "<group>"; };
 		0F9307CA21B863AC00558FC3 /* ES Christmas Tinsel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Christmas Tinsel.ttf"; sourceTree = "<group>"; };
 		0F9307CC21B863D300558FC3 /* ES Kingthings Christmas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ES Kingthings Christmas.ttf"; sourceTree = "<group>"; };
+		0F9307CF21B9C4EE00558FC3 /* LabelWithAdaptiveTextHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithAdaptiveTextHeight.swift; sourceTree = "<group>"; };
 		0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,9 +108,9 @@
 		0F1A34392189484700873F96 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */,
-				0F26319621718B2A006026F1 /* GameViewController.swift */,
 				0F19F1AE219F670A001C8284 /* StartScreenViewController.swift */,
+				0F26319621718B2A006026F1 /* GameViewController.swift */,
+				0FD2F3D22184077100F50A4F /* ScoreScreenViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +163,7 @@
 				0F26319821718B2A006026F1 /* Main.storyboard */,
 				0F1A34392189484700873F96 /* Controllers */,
 				0F1A343A2189485E00873F96 /* Models */,
+				0F9307CE21B9C47A00558FC3 /* View */,
 				0F1A343B2189486C00873F96 /* Supporting Files */,
 			);
 			path = "Stroop Game";
@@ -196,6 +199,14 @@
 				0F93079F21B85CB500558FC3 /* ES Revolt.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		0F9307CE21B9C47A00558FC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F9307CF21B9C4EE00558FC3 /* LabelWithAdaptiveTextHeight.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 				0F4B895C21B6F8AA009D4270 /* PlaySoundFunction.swift in Sources */,
 				0F26319521718B2A006026F1 /* AppDelegate.swift in Sources */,
 				0F19F1AF219F670A001C8284 /* StartScreenViewController.swift in Sources */,
+				0F9307D021B9C4EE00558FC3 /* LabelWithAdaptiveTextHeight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
