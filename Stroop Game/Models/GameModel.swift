@@ -18,7 +18,7 @@ class GameModel {
     
     // MARK:- variables & constants
     ///Keeps track of game timer.
-    private let totalGameTime = 15
+    private var totalGameTime: Int
     var timeRemaining = 0
     var timerIsRunning = false
     private var gameTimer: Timer?
@@ -33,10 +33,26 @@ class GameModel {
     var oldXmasWordsArray: [String]
     var xmasWordsArray: [String]
     
+    //INITIALIZER
+    init() {
+        self.xmasWordsArray = ["Color1"]
+        self.oldXmasWordsArray = ["Color1"]
+        totalGameTime = 5
+    }
+    
     init(words: [String]) {
         self.xmasWordsArray = words
         self.oldXmasWordsArray = words
+        totalGameTime = 5
     }
+    
+    init(words: [String], gameTimePassed: Int ) {
+        self.xmasWordsArray = words
+        self.oldXmasWordsArray = words
+        self.totalGameTime = gameTimePassed
+    }
+    
+    
     
     // MARK:- functions
     ///Game logic - Starts the clock. Increments points for correct selections. Ends game for incorrect selections.
@@ -93,6 +109,10 @@ class GameModel {
                 self.endGame()
             }
         }
+    }
+    
+    func stopTheTimer() {
+        gameTimer?.invalidate()
     }
 }
 

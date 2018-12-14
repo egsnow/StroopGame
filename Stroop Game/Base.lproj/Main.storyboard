@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHH-Vr-amb">
-    <device id="ipad12_9rounded" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,8 +16,8 @@
         <array key="ES Christmas Lights Outdoor.ttf">
             <string>ChristmasLightsOutdoor</string>
         </array>
-        <array key="ES Kingthings Christmas.ttf">
-            <string>KingthingsChristmas2</string>
+        <array key="ES Valentine.ttf">
+            <string>valentine</string>
         </array>
     </customFonts>
     <scenes>
@@ -25,20 +26,20 @@
             <objects>
                 <viewController id="uHH-Vr-amb" customClass="StartScreenViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UwM-me-GW5">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="963852741" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-Ky-GCj">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="9JE-Zw-CHd">
-                                <rect key="frame" x="20" y="39" width="984" height="1292"/>
+                                <rect key="frame" x="20" y="59" width="374" height="788"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8RX-Uf-DNA">
-                                        <rect key="frame" x="129" y="0.0" width="726" height="1042"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="628"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Stroop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afA-yT-awV">
-                                                <rect key="frame" x="0.0" y="0.0" width="726" height="350"/>
+                                                <rect key="frame" x="22" y="0.0" width="330.33333333333331" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="350" id="i8E-MW-uxR"/>
                                                     <constraint firstAttribute="height" constant="130" id="z1Q-xm-Mfn"/>
@@ -63,18 +64,18 @@
                                                     <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="190"/>
                                                 </variation>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3aQ-OR-hbz">
-                                                <rect key="frame" x="63" y="360" width="600" height="682"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3aQ-OR-hbz">
+                                                <rect key="frame" x="0.0" y="140" width="374" height="488"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Oe-wlU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="546"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.050000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Oe-wlU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="296.33333333333331"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="600" id="fNZ-8b-NJR"/>
                                                         </constraints>
                                                         <string key="text">Game Instructions:
 
 A series of words will be displayed in a separate series of colors. Ignore the word and tap the color in order to earn a point.  </string>
-                                                        <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="65"/>
+                                                        <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="35"/>
                                                         <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,26 +91,39 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                             </mask>
                                                         </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="50"/>
+                                                            <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="50"/>
                                                         </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-F4-dce">
-                                                        <rect key="frame" x="146" y="556" width="308" height="126"/>
-                                                        <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="45"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.050000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-F4-dce">
+                                                        <rect key="frame" x="0.0" y="301.33333333333331" width="374" height="100.66666666666669"/>
+                                                        <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="35"/>
                                                         <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="65"/>
+                                                            <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="65"/>
                                                         </variation>
                                                     </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Default Time: 10 Seconds" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7P-bL-rUc">
+                                                        <rect key="frame" x="87" y="407" width="200" height="81"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="mMV-Ni-gMp"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                                    </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="D2o-F4-dce" firstAttribute="leading" secondItem="3aQ-OR-hbz" secondAttribute="leading" id="fH3-BY-ZJh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="D2o-F4-dce" secondAttribute="trailing" id="tNd-Gl-3ol"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM3-Tr-jUT">
-                                        <rect key="frame" x="432" y="1142" width="120" height="150"/>
+                                        <rect key="frame" x="127" y="638" width="120" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="98y-UW-vxc"/>
                                             <constraint firstAttribute="width" constant="120" id="LaP-Er-WCF"/>
@@ -144,6 +158,7 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                         <outlet property="gameHighScore" destination="D2o-F4-dce" id="MBQ-NV-rZR"/>
                         <outlet property="gameLogo" destination="afA-yT-awV" id="abF-cx-3dQ"/>
                         <outlet property="startButton" destination="oM3-Tr-jUT" id="r0W-lj-snV"/>
+                        <outlet property="timePickerTextField" destination="f7P-bL-rUc" id="Vew-B4-zCt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5VO-C2-XTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,17 +170,17 @@ A series of words will be displayed in a separate series of colors. Ignore the w
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="987654321" translatesAutoresizingMaskIntoConstraints="NO" id="qVe-wZ-VTg">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0eR-cM-dj7" userLabel="Parent Stack">
-                                <rect key="frame" x="20" y="44" width="984" height="1282"/>
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NPc-29-dyl">
-                                        <rect key="frame" x="338" y="0.0" width="308" height="289"/>
+                                        <rect key="frame" x="81.333333333333329" y="0.0" width="211.33333333333337" height="234"/>
                                         <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="65"/>
                                         <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -176,13 +191,13 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-EF-mEx" userLabel="All Button Stack">
-                                        <rect key="frame" x="80.5" y="299" width="823" height="823"/>
+                                        <rect key="frame" x="0.0" y="244" width="374" height="374"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PjC-Uy-81W" userLabel="Top Button Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="823" height="406.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
                                                 <subviews>
                                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie2-bi-9mO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="406.5" height="406.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ie2-bi-9mO" secondAttribute="height" multiplier="1:1" id="0ew-wN-SRi"/>
@@ -197,7 +212,7 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wy3-lU-9Qb">
-                                                        <rect key="frame" x="416.5" y="0.0" width="406.5" height="406.5"/>
+                                                        <rect key="frame" x="192" y="0.0" width="182" height="182"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="7Sg-gg-uVB"/>
@@ -211,10 +226,10 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ltc-20-uox" userLabel="Bottom Button Stack">
-                                                <rect key="frame" x="0.0" y="416.5" width="823" height="406.5"/>
+                                                <rect key="frame" x="0.0" y="192" width="374" height="182"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ6-lW-Ouj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="406.5" height="406.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Oly-1i-emO"/>
@@ -226,7 +241,7 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0of-08-UJI">
-                                                        <rect key="frame" x="416.5" y="0.0" width="406.5" height="406.5"/>
+                                                        <rect key="frame" x="192" y="0.0" width="182" height="182"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="0of-08-UJI" secondAttribute="height" multiplier="1:1" id="6Kn-JF-TNH"/>
@@ -242,22 +257,38 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-aD-b7s">
-                                        <rect key="frame" x="401.5" y="1132" width="181" height="150"/>
+                                        <rect key="frame" x="0.0" y="628" width="374" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="97z-db-tay"/>
                                             <constraint firstAttribute="height" constant="150" id="e1V-p6-Vbe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="45"/>
+                                        <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="45"/>
                                         <color key="textColor" red="0.12282992149999999" green="0.18915769460000001" blue="0.086241357029999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="2" height="2"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="55"/>
+                                            <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="55"/>
                                         </variation>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FOu-aD-b7s" secondAttribute="trailing" id="GcL-Zd-iNz"/>
+                                    <constraint firstItem="FOu-aD-b7s" firstAttribute="leading" secondItem="0eR-cM-dj7" secondAttribute="leading" id="V0L-7K-IIu"/>
+                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfH-FF-t4v">
+                                <rect key="frame" x="20" y="44" width="30" height="42"/>
+                                <fontDescription key="fontDescription" name="Christmabet" family="Christmabet" pointSize="30"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xXC-1W-KCY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -268,6 +299,8 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                             <constraint firstItem="0eR-cM-dj7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j27-EM-x6U"/>
                             <constraint firstItem="0eR-cM-dj7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nKS-FN-Gc7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0eR-cM-dj7" secondAttribute="bottom" constant="20" id="pFQ-Ih-HUm"/>
+                            <constraint firstItem="CfH-FF-t4v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qHf-KP-uVa"/>
+                            <constraint firstItem="CfH-FF-t4v" firstAttribute="leading" secondItem="0eR-cM-dj7" secondAttribute="leading" id="qcE-aR-fjg"/>
                             <constraint firstAttribute="trailing" secondItem="qVe-wZ-VTg" secondAttribute="trailing" id="wAf-Rp-K1L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -295,20 +328,20 @@ A series of words will be displayed in a separate series of colors. Ignore the w
             <objects>
                 <viewController id="ajM-Mv-quZ" customClass="ScoreScreenViewController" customModule="Stroop_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gWC-F2-e7A">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scorescreen" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-X4-Ypz">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="EHJ-8u-kDW">
-                                <rect key="frame" x="20" y="44" width="984" height="1282"/>
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-ma-Tb0">
-                                        <rect key="frame" x="0.0" y="0.0" width="984" height="1192"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="688"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="9IL-i1-RGH">
-                                                <rect key="frame" x="334" y="0.0" width="316" height="475"/>
+                                                <rect key="frame" x="94" y="0.0" width="186" height="455.33333333333331"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="Rel-x8-vgU">
                                                         <variation key="widthClass=regular" constant="475"/>
@@ -337,36 +370,46 @@ A series of words will be displayed in a separate series of colors. Ignore the w
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fm4-1w-hpL">
-                                                <rect key="frame" x="255.5" y="480" width="473" height="712"/>
+                                                <rect key="frame" x="0.0" y="460.33333333333343" width="374" height="227.66666666666669"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-ga-uhK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="473" height="353.5"/>
-                                                        <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="70"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-ga-uhK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="111.33333333333333"/>
+                                                        <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="50"/>
                                                         <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="100"/>
+                                                            <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="100"/>
                                                         </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="xqs-Mk-OtT">
-                                                        <rect key="frame" x="92" y="358.5" width="289" height="353.5"/>
-                                                        <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="70"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="xqs-Mk-OtT">
+                                                        <rect key="frame" x="0.0" y="116.33333333333326" width="374" height="111.33333333333331"/>
+                                                        <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="50"/>
                                                         <color key="textColor" red="0.54971480370000003" green="0.17317205669999999" blue="0.1175209805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="KingthingsChristmas2" family="Kingthings Christmas 2" pointSize="100"/>
+                                                            <fontDescription key="fontDescription" name="valentine" family="valentine" pointSize="100"/>
                                                         </variation>
                                                     </label>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="xqs-Mk-OtT" firstAttribute="leading" secondItem="fm4-1w-hpL" secondAttribute="leading" id="0pd-fc-6op"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ocl-ga-uhK" secondAttribute="trailing" id="NWF-Kt-i0Z"/>
+                                                    <constraint firstItem="Ocl-ga-uhK" firstAttribute="leading" secondItem="fm4-1w-hpL" secondAttribute="leading" id="TOd-9t-9g9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xqs-Mk-OtT" secondAttribute="trailing" id="e4E-LR-Dqz"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fm4-1w-hpL" secondAttribute="trailing" id="3by-zD-UlK"/>
+                                            <constraint firstItem="fm4-1w-hpL" firstAttribute="leading" secondItem="Apk-ma-Tb0" secondAttribute="leading" id="8vV-8e-ieI"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bON-HL-c6l">
-                                        <rect key="frame" x="289" y="1232" width="406" height="50"/>
+                                        <rect key="frame" x="51" y="728" width="272" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8hp-iN-2jr"/>
                                             <constraint firstAttribute="height" constant="50" id="O7F-Cv-DC1"/>
