@@ -54,7 +54,6 @@ class GameViewController: UIViewController, GameDelegate {
         
         playSound("clack")
         gameBrain!.delegate = self
-        gameBrain!.highScore = UserDefaults.standard.integer(forKey: "highScore")
     }
     
     
@@ -96,7 +95,7 @@ class GameViewController: UIViewController, GameDelegate {
     
     ///Game timer logic.
     internal func updateTimerLabel(timeRemaining: Int) {
-//            self.timerLabel.text = "Timer: \(self.gameBrain.timeRemaining)"
+            self.timerLabel.text = "Timer: \(self.gameBrain!.timeRemaining)"
     }
     
 

@@ -23,6 +23,8 @@ class StartScreenViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         gameTime = pickerData[row]
+        highScore = getHighScore(gameTime: gameTime)
+        gameHighScore.text = "High Score: \(highScore)"
         return timePickerTextField.text = "\(pickerData[row]) Seconds"
     }
     
@@ -31,13 +33,10 @@ class StartScreenViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var timePickerTextField: UITextField!
     
-    let highscore = UserDefaults.standard.integer(forKey: "highScore")
+    var highScore = 0
     
     let pickerData = [5, 10, 15, 30]
     var gameTime = 10
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +44,16 @@ class StartScreenViewController: UIViewController, UIPickerViewDelegate, UIPicke
         timerPicker.delegate = self
         timerPicker.selectRow(1, inComponent: 0, animated: false)
         timePickerTextField.inputView = timerPicker
-        
         gameLogo.font = gameLogo.font.withSize(gameLogo.frame.height * 7/8)
-        gameHighScore.text = "High Score: \(highscore)"
         UIView.animate(withDuration: TimeInterval(1.0), delay: 0, options: [.repeat, .autoreverse, .allowUserInteraction], animations: {
             self.startButton.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         }, completion: nil)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        highScore = getHighScore(gameTime: gameTime)
+        gameHighScore.text = "High Score: \(highScore)"
     }
     
     
@@ -58,17 +61,23 @@ class StartScreenViewController: UIViewController, UIPickerViewDelegate, UIPicke
         self.view.endEditing(true)
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nextVC = segue.destination as? GameViewController {
             nextVC.gameTime = self.gameTime
         }
     }
     
-    
-    
-    
-    
+    func getHighScore(gameTime: Int) -> Int {
+        if let highScoreDictionary = UserDefaults.standard.dictionary(forKey: "highScoreDictionary") {
 
+            return highScoreDictionary[String(gameTime)] as! Int
+        } else {
+            var temporaryDictionary = [String : Int]()
+            for timeInt in pickerData {
+                temporaryDictionary[String(timeInt)] = 0
+            }
+            UserDefaults.standard.set(temporaryDictionary, forKey: "highScoreDictionary")
+            return 0
+        }
+    }
 }

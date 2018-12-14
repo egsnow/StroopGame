@@ -37,7 +37,6 @@ class ScoreScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         postScores()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {

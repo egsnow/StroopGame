@@ -27,6 +27,7 @@ class GameModel {
     var delegate: GameDelegate?
     private let newGameScore = 0
     var currentScore = 0
+    var highScoreDictionary = [String : Int]()
     var highScore = 0
     var highScoreIsNew = false
     var answerIsCorrect = false
@@ -50,9 +51,13 @@ class GameModel {
         self.xmasWordsArray = words
         self.oldXmasWordsArray = words
         self.totalGameTime = gameTimePassed
+        if let tempDictionary = UserDefaults.standard.dictionary(forKey: "highScoreDictionary") {
+            highScoreDictionary = tempDictionary as! [String : Int]
+            highScore = highScoreDictionary[String(totalGameTime)]!
+            print(highScoreDictionary)
+
+        }
     }
-    
-    
     
     // MARK:- functions
     ///Game logic - Starts the clock. Increments points for correct selections. Ends game for incorrect selections.
@@ -75,8 +80,9 @@ class GameModel {
         if highScore < currentScore {
             highScore = currentScore
             highScoreIsNew = true
+            highScoreDictionary[String(totalGameTime)] = highScore
             playSound("fonfar")
-            UserDefaults.standard.set(highScore, forKey: "highScore")
+            UserDefaults.standard.set(highScoreDictionary, forKey: "highScoreDictionary")
         } else if highScore >= currentScore {
             highScoreIsNew = false
         }
